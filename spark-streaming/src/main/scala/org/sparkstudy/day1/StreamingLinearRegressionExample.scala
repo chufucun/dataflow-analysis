@@ -57,6 +57,14 @@ object StreamingLinearRegressionExample {
       .setInitialWeights(Vectors.zeros(numFeatures))
 
     model.trainOn(trainingData)
+
+    // (lp.label, lp.features)   参考值, 特征集合
+    // -------------------------------------------
+    // Time: 1527588155000 ms
+    // -------------------------------------------
+    // (0.0,-0.01386366965641772)
+    // (1.0,1.3260283849526537)
+    // (2.0,1.9560477835247314)
     model.predictOnValues(testData.map(lp => (lp.label, lp.features))).print()
 
     ssc.start()
