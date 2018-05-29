@@ -9,6 +9,8 @@ import org.apache.spark.mllib.regression.StreamingLinearRegressionWithSGD
 import org.apache.spark.streaming._
 
 /**
+  * 样例: 流式线性回归 - Streaming linear regression
+  *
   * 注:textFileStream 在windows下不能监控文件创建、移动等操作
   *    通过py_tools子模块的iris_newdata来自动生成 训练和测试 的数据集。
   *
