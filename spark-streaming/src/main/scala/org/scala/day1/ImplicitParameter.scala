@@ -1,5 +1,4 @@
-package org.sparkstudy.day3
-
+package org.scala.day1
 
 class Student(var name: String) {
 

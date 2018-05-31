@@ -20,14 +20,14 @@ import org.apache.spark.{SparkConf, SparkContext}
 object NifiToSparkStreaming {
   def main(args: Array[String]): Unit = {
 
-    val conf = new SiteToSiteClient.Builder().url("http://localhost:8080/nifi").portName("sparkstreaming").buildConfig()
+    val conf = new SiteToSiteClient.Builder().url("http://localhost:8080/nifi").portName("sparkstreaming").requestBatchCount(1000).buildConfig()
     val config = new SparkConf().setAppName("Nifi_Spark_Phoenix").setMaster("local[4]")
     val sc = new SparkContext(config)
     implicit val ssc = new StreamingContext(sc, Seconds(3))
-    val numStreams = 3
+    val numStreams = 1
     val nifiStreams = (1 to numStreams).map(i => ssc.receiverStream(new NiFiReceiver(conf, StorageLevel.MEMORY_ONLY)))
     val lines = ssc.union(nifiStreams)
-    lines.count().print()
+//    lines.count().print()
     implicit val lineStrings = lines.map(dataPacket => new String(dataPacket.getContent, StandardCharsets.UTF_8))
     val words = lineStrings.flatMap(_.split(" ")).map(x => (x, 1))
 

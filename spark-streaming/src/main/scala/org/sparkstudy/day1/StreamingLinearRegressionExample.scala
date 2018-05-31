@@ -50,6 +50,7 @@ object StreamingLinearRegressionExample {
 
     // $example on$
     val trainingLines = ssc.textFileStream(trainingDir)
+    trainingLines.print()
     val trainingData = trainingLines.map(LabeledPoint.parse)
 
     val testData = ssc.textFileStream(testDir).map(LabeledPoint.parse)
