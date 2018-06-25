@@ -14,7 +14,7 @@ object MapWithState {
   def main(args: Array[String]): Unit = {
 
     import org.apache.spark.streaming.{StreamingContext, Seconds}
-    var config = new SparkConf().setAppName("MapWithStateApp").setMaster("local[2]")
+    val config = new SparkConf().setAppName("MapWithStateApp").setMaster("local[2]")
     val sc = new SparkContext(config)
     val ssc = new StreamingContext(sc, batchDuration = Seconds(5))
 
