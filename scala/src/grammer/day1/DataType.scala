@@ -1,4 +1,4 @@
-package org.scala.day1
+package grammer.day1
 
 /**
   * Scala 类型

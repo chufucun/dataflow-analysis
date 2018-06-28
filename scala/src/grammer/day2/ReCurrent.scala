@@ -1,4 +1,4 @@
-package org.scala.day2
+package grammer.day2
 
 /**
   * 知识点:

@@ -1,4 +1,4 @@
-package org.scala.day1
+package grammer.day1
 
 /**
   * 在scala中，public是默认的可见级别，即对这个函数将对所有调用者可见

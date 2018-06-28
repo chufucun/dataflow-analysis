@@ -1,4 +1,4 @@
-package org.scala.day2
+package grammer.day2
 
 /**
   * Scala Option(选项)类型用来表示一个值是可选的（有值或无值)
