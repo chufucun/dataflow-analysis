@@ -15,6 +15,7 @@ dependencies {
         exclude(module: 'jul-to-slf4j')
     }
     compile 'org.apache.spark:spark-mllib_2.11:2.2.1'
+    compile 'com.huaban:jieba-analysis:1.0.2'
 
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
 }

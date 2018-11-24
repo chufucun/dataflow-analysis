@@ -1,4 +1,4 @@
-package org.scala.day1
+package grammer.day1
 
 /**
   * 每个类都有一个主构造器，这个构造器和类的定义“交织”在一起,主构造器执行类体中的所有语句.

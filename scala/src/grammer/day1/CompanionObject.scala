@@ -1,4 +1,4 @@
-package org.scala.day1
+package grammer.day1
 
 /**
   * companion objects  伙伴对象
